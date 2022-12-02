@@ -1,3 +1,12 @@
+def addOcurrences(word, occurrences, file, type):
+    for index, line in enumerate(file["linhas_do_arquivo"]):
+        if word.lower() in line.lower():
+            if type == "with_content":
+                occurrences.append({"linha": index + 1, "conteudo": line})
+            else:
+                occurrences.append({"linha": index + 1})
+
+
 def exists_word(word, instance):
     processed_datas_with_word = list()
     occurrences = list()
@@ -14,11 +23,9 @@ def exists_word(word, instance):
             )
         if index <= len(instance.queue) - 1:
             file = instance.queue[index]
+            file_name = file["nome_do_arquivo"]
         occurrences = list()
-        for index, line in enumerate(file["linhas_do_arquivo"]):
-            if word.lower() in line.lower():
-                file_name = file["nome_do_arquivo"]
-                occurrences.append({"linha": index + 1})
+        addOcurrences(word, occurrences, file, 'without_content')
 
     return processed_datas_with_word
 
@@ -39,10 +46,8 @@ def search_by_word(word, instance):
             )
         if index <= len(instance.queue) - 1:
             file = instance.queue[index]
+            file_name = file["nome_do_arquivo"]
         occurrences = list()
-        for index, line in enumerate(file["linhas_do_arquivo"]):
-            if word.lower() in line.lower():
-                file_name = file["nome_do_arquivo"]
-                occurrences.append({"linha": index + 1, "conteudo": line})
+        addOcurrences(word, occurrences, file, "with_content")
 
     return processed_datas_with_word
