@@ -1,13 +1,10 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+<h1> Sobre </h1>
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+<p> Projeto Ting onde o desafio era implementar um programa que simule um algoritmo de indexação de documentos similar ao do Google. Tal programa deve ser capaz de identificar ocorrências de termos em arquivos TXT. </p>
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<p> Para isso, o programa desenvolvido deve ter dois módulos: </p>
+
+<ul>
+  <li> Módulo de gerenciamento de arquivos que permite anexar arquivos de texto (formato TXT) </li>
+  <li> Módulo de buscas que permite operar funções de busca sobre os arquivos anexados. </li>
+</ul>
